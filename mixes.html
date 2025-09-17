@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="just-kaycode-logo" href="Icons/logo.png">
+    <title>JUST KAYCODE</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="menu">
+                <div>
+                    <a href="index.html" class="logo">
+                        <!-- <img src="Images/logo.jpg" alt=""> -->
+                        <h4>JUST <span>KAYCODE</span></h4>
+                    </a>
+                </div>
+
+                <div class="navbar">
+                    <ul class="nav-list">
+                        <li><a class="home" href="index.html" >Home</a></li>
+                        <li><a class="profile" href="profile.html">Profile</a></li>
+                        <li><a class="music" href="music.html">Music</a></li>
+                        <li><a class="mixes" href="mixes.html">Mixes</a></li>
+                        <li><a class="contacts" href="contacts.html">Contact</a></li>
+
+                        <a href="shop.html" class="merch-tab">
+                            <p>Shop • </p>
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- MIX SECTION----------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------------------------ -->
+
+    <section class="mixes-container">
+        <div class="aside-wrapper">
+            <aside class="sidebar">
+                <h2>Playlists</h2>
+                <button data-playlist="all" class="active">Show All</button>
+                <button data-playlist="PLX5_l-5U-rRsOiFT99du9FBZGAlBXO-37" data-name="urban">The Burn Xp Urban Series</button>
+                <button data-playlist="PLX5_l-5U-rRvAVGbj0p1rKm_Fu_zijHjN">Mugithi Overdose Series</button>
+                <button data-playlist="PLX5_l-5U-rRs_2tJKxIs3bqriQ9D8wrVY">Mugithi Overdose Sauce</button>
+                <button data-playlist="PLX5_l-5U-rRvbtA3YMp1gl7k-33mbAFd5">Mugithi Overdose Rhumba</button>
+                <button data-playlist="PLX5_l-5U-rRvKqSkqGPI6ony_7hG_Y-fv">Mugithi Overdose Artist Best</button>
+                <button data-playlist="PLX5_l-5U-rRs5CDFLs2cdTpHemDu9dTJ3">Kikuyu Gospel Mixes</button>
+                <p></p>
+            </aside>
+            <div class="sidebar-watermark">
+                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> | JUST KAYCODE</p>
+                <p>All Rights Reserved</p>
+            </div>
+        </div>
+
+        <main class="content">
+            <div class="search-bar-subscribe">
+                <input type="text" id="search" placeholder="Search videos..." />
+                <div class="subscribe-btn">
+                    <img src="Images/profile2.png" alt="YouTube Profile Image">
+                    <button class="sub"><a href="http://www.youtube.com/@justkaycode?sub_confirmation=1" target="_blank">Subscribe</a></button>
+                </div>
+            </div>
+            
+            <div id="loading" class="loading">Loading videos...</div>
+            <div class="videos" id="videos"></div>
+
+        </main>
+
+        
+        <!-- Popup Video Player -->
+        <div class="popup" id="popup">
+            <div class="player-container">
+            <div id="player"></div>
+            <div class="close-btn" id="closeBtn">&times;</div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
