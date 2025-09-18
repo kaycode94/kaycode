@@ -191,7 +191,7 @@ p{
 }
 .banner-content h1 span{
     font-family: 'Alatsi', sans-serif;
-    font-size: 5rem;
+    font-size: clamp(3rem, 6vw, 10rem);
     color: #fff;
     padding: 1.7rem 1rem;
     letter-spacing: 4px;
@@ -2560,6 +2560,7 @@ p span{
         margin: 2rem 10px;
     }
 }
+
 
 
 
