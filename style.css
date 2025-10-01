@@ -194,7 +194,7 @@ p{
     font-size: clamp(3rem, 6vw, 10rem);
     color: #fff;
     padding: 1.7rem 1rem;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 .banner-content h2{
     font-family: 'Montserrat', sans-serif;
@@ -667,7 +667,7 @@ button img{
     position: relative;
 }
 .background-clip{
-    max-width: 280px;
+    max-width: 300px;
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -676,14 +676,14 @@ button img{
     border-radius: 10px;
 }
 .dash-right .img-2{
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
+    max-width: 480px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
 }
 
 
@@ -2257,10 +2257,7 @@ p span{
     .background-clip{
         max-width: 360px;
     }
-    .dash-right .img-2{
-        display: none;
-    }
-   
+ 
 
     /* PROFILE PAGE..............................................................................................
     ............................................................................................................. 
@@ -2341,7 +2338,7 @@ p span{
     .banner-content{
         height: 100vh;
         margin: 0;
-        background: url(Images/background_768.png) no-repeat center / cover;
+        background: url(Images/background_768-2.png) no-repeat center / cover;
     }
     .banner-image{
         display: none;
@@ -2560,7 +2557,6 @@ p span{
         margin: 2rem 10px;
     }
 }
-
 
 
 
