@@ -9,7 +9,7 @@ body{
     color: #bebebe;
     background: #0c0c0c;
 
-    /* background-image: url('Images/profile-page-bkg.jpg'); */
+    background-image: url('Images/profile-page-bkg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -696,6 +696,7 @@ button:hover{
     border-radius: 8px;
 }
 .extras{
+    background: linear-gradient(90deg, #000, #1a1a1a, #000);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     padding: 10px;
@@ -749,7 +750,7 @@ button:hover{
 .merch-slide{
     display: flex;
     width: calc(250px * 10);
-    animation: scroll 40s linear infinite;
+    animation: scroll 60s linear infinite;
 }
 
 @keyframes scroll{
@@ -757,7 +758,7 @@ button:hover{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-250px * 5));
+        transform: translateX(calc(-250px * 9));
     }
 }
 
@@ -775,24 +776,6 @@ button:hover{
     width: 100%;
 }
 
-/* .home-merch-slider::before,
-.home-merch-slider::after {
-    content: '';
-    height: 100%;
-    width: 15%;
-    background: linear-gradient(to right, #0c0c0c 0%, rgba(255,255,255,0) 100%);
-    position: absolute;
-    z-index: 2;
-} */
-.home-merch-slider::before{
-    left: 0;
-    top: 0;
-}
-.home-merch-slider::after{
-    right: -1px;
-    top: 0;
-    transform: rotateZ(180deg);
-}
 
 .home-merch button{
     display: flex;
@@ -832,13 +815,6 @@ button:hover{
 */
 
 
-.profile-page{
-    background: url(Images/profile-page-bkg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 .page-title{
     top: 0;
     position: relative;
@@ -853,7 +829,6 @@ button:hover{
 .page-title h1{
     font-size: clamp(30px, 4vw, 60px);
     text-align: center;
-    font-weight: 200;
     color: #fff;
     text-shadow: 1px 2px 20px rgba(0, 0, 0, .5);
     top: 55%;
@@ -863,7 +838,6 @@ button:hover{
 }
 .page-title h1 span{
     color: crimson;
-    font-weight: 700;
 }
 
 .profile-container{
@@ -949,7 +923,7 @@ p span{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #bebebe;
+    border: 1px solid #bebebe80;
     padding: 10px 20px;
     border-radius: 8px;
 }
@@ -958,7 +932,7 @@ p span{
     font-size: 15px;
 }
 .profile-share{
-    border: 1px solid #bebebe;
+    border: 1px solid #bebebe80;
     padding: 10px 20px;
     border-radius: 8px;
     display: flex;
@@ -1001,7 +975,7 @@ p span{
 .modal-content {
     background: linear-gradient(15deg, #dc143c, #000, #1a1a1a);
     padding: 20px;
-    border: 1px solid #bebebe;
+    border: 1px solid #bebebe80;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
@@ -1114,7 +1088,7 @@ p span{
 
 .book{
     background: none;
-    border-color: #bebebe;
+    border-color: #bebebe80;
 }
 .booking{
     display: flex;
@@ -1131,7 +1105,6 @@ p span{
 }
 .book-button p{
     color: #fff;
-    letter-spacing: 3px;
 }
 .book-button a{
     text-decoration: none;
@@ -1291,13 +1264,7 @@ p span{
 ............................................................................................................
 */
 
-.music-page{
-    background: url(Images/bkg-1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 
 .music-area{
     display: flex;
@@ -1524,6 +1491,10 @@ p span{
 */
 
 
+
+.mixes-page{
+    background: #0c0c0c;
+}
 .mixes-container{
     margin-top: 0px;
 }
@@ -1752,15 +1723,6 @@ p span{
 */
 
 
-
-.contacts-page{
-    background: url(Images/bkg-1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .contacts .container{
     margin: 2rem 6rem;
 }
@@ -1768,7 +1730,7 @@ p span{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
-    background: #000000cc;
+    background: #00000030;
     border: 1px solid #bebebe30;
     border-radius: 10px;
     padding: 4rem;
@@ -1823,11 +1785,7 @@ p span{
     font-size: 15px;
     margin-top: 30px;
 }
-.info-icon{
-    width: 30px;
-    height: 30px;
-    filter: grayscale(10%) sepia(100%) hue-rotate(30deg);
-}
+
 
 
 /* Social Icons............................................................................................. */
