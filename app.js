@@ -45,84 +45,25 @@ hamburger.onclick = function() {
 
 // Hero SLider___________________________________________________________________________________________________
 
-
-const textSlides = document.querySelectorAll(".text-slide");
-const imageSlides = document.querySelectorAll(".image-slide");
-
-const banner = document.getElementById("banner");
-const hero = document.getElementById("hero");
-
-const slideDuration = 4000;
-const bannerDuration = 3000;
-const fadeDuration = 500;
-
-function showSlide(index) {
-  textSlides.forEach((slide, i) => {
-    slide.style.opacity = i === index ? "1" : "0";
-    slide.classList.toggle("show", i === index);
-  });
-
-  imageSlides.forEach((slide, i) => {
-    slide.style.opacity = i === index ? "1" : "0";
-  });
-}
-
-function resetSlides() {
-  // Hide all slides initially
-  textSlides.forEach((slide) => {
-    slide.style.opacity = "0";
-    slide.classList.remove("show");
-  });
-  imageSlides.forEach((slide) => {
-    slide.style.opacity = "0";
-  });
-}
-
-function playSlides(callback) {
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".image-slide");
   let current = 0;
-  showSlide(current);
+  const duration = 5000; // 5 seconds per slide
 
-  const interval = setInterval(() => {
-    current++;
-    if (current < textSlides.length) {
-      showSlide(current);
-    } else {
-      clearInterval(interval);
-      callback(); // After last slide
-    }
-  }, slideDuration);
-}
+  // Initialize first slide
+  slides[current].classList.add("active");
 
-function startCycle() {
-  resetSlides(); // Start fresh from slide 1
+  function showNextSlide() {
+    const next = (current + 1) % slides.length;
 
-  // Show banner
-  banner.classList.add("active");
-  hero.classList.remove("active");
+    slides[current].classList.remove("active");
+    slides[next].classList.add("active");
 
-  setTimeout(() => {
-    // Fade out banner, fade in hero
-    banner.classList.remove("active");
-    hero.classList.add("active");
+    current = next;
+  }
 
-    setTimeout(() => {
-      // Start slide show
-      playSlides(() => {
-        // After slides, fade out hero
-        hero.classList.remove("active");
-
-        setTimeout(() => {
-          // Restart loop
-          startCycle();
-        });
-      });
-    }, fadeDuration);
-  }, bannerDuration);
-}
-
-window.onload = () => {
-  startCycle();
-};
+  setInterval(showNextSlide, duration);
+});
 
 
 
@@ -151,12 +92,7 @@ window.onload = () => {
       document.getElementById("whatsappShare").href =
         `https://wa.me/?text=${encodeURIComponent("Download Just Kaycode's Profile:  ")}${encodedPdfUrl}`;
       
-      document.getElementById("facebookShare").href =
-        `https://www.facebook.com/sharer/sharer.php?u=${encodedPdfUrl}`;
-      
-      document.getElementById("twitterShare").href =
-        `https://twitter.com/intent/tweet?url=${encodedPdfUrl}&text=Download Just Kaycode's Profile: `;
-
+  
       // Show encoded link above Copy button
       // document.getElementById("pdfLinkDisplay").textContent = encodedPdfUrl;
     }
