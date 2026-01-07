@@ -16,6 +16,9 @@ if(pageName === "music.html"){
 if(pageName === "mixes.html"){
     document.querySelector(".mixes").classList.add("activeLink");
 }
+if(pageName === "downloads.html"){
+    document.querySelector(".downloads").classList.add("activeLink");
+}
 if(pageName === "contacts.html"){
     document.querySelector(".contacts").classList.add("activeLink");
 }
@@ -43,7 +46,7 @@ hamburger.onclick = function() {
 
 
 
-// Hero SLider___________________________________________________________________________________________________
+// Shows Updates SLider___________________________________________________________________________________________________
 
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".image-slide");
